@@ -1,0 +1,194 @@
+/* --- 1. FONTS AND GENERAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* Importing a professional Google Font (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    /* Define a color palette for easy changes */
+    --primary-color: #e55039; /* Warm Red/Orange for accents */
+    --secondary-color: #3d3d3d; /* Dark Grey for text */
+    --background-color: #f7f9fc; /* Light, subtle background */
+    --card-background: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure full page background */
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- 2. HEADER & FOOTER STYLING --- */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    position: relative;
+}
+
+.site-header h1 {
+    color: white;
+    font-size: 2.8em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.site-header p {
+    font-weight: 300;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    margin-top: auto; /* Pushes footer to the bottom */
+    font-size: 0.8em;
+}
+
+/* Back Link Style (for detail pages) */
+.back-link-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    font-weight: 400;
+}
+.back-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* --- 3. MAIN MENU STYLING (`index.html`) --- */
+.main-menu-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+}
+
+.recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 25px;
+    background-color: var(--background-color);
+    border: 1px solid #f0f0f0;
+    border-left: 5px solid var(--primary-color); /* Highlight bar */
+    border-radius: 8px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.recipe-link:hover {
+    background-color: #fff0ed; /* Very light primary color tint */
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(229, 80, 57, 0.1);
+}
+
+.arrow {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    transition: transform 0.3s;
+}
+.recipe-link:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* --- 4. RECIPE DETAIL STYLING --- */
+.recipe-detail-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.recipe-content img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-light);
+}
+
+.details-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #2ecc71; /* A friendly green for tags */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-box {
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 30px;
+}
+
+.section-box h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 1.5em;
+}
+
+.section-box ul, .section-box ol {
+    padding-left: 20px;
+}
+
+.section-box li {
+    margin-bottom: 8px;
+    font-weight: 300;
+}
